@@ -7,7 +7,7 @@
 
 package imp_ques;
 import java.util.*;
-public class altpairs_ques {
+public class Altpairs_ques {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the word: ");

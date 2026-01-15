@@ -8,7 +8,7 @@
 
 package imp_ques;
 import java.util.*;
-public class stringMatch_ques {
+public class StringMatch_ques {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the words a and b: ");

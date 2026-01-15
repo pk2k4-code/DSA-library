@@ -8,7 +8,7 @@
 
 package imp_ques;
 import java.util.*;
-public class last2_ques {
+public class Last2_ques {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the word: ");
