@@ -1,0 +1,37 @@
+Arrays:
+
+1-- arrays can be initialized like -> int[] arr = new int[size]; OR int[] arr = {elements}
+
+2-- all the data inside the array has to be of the same datatype.
+
+3-- In int[] arr = new int[5] -> int[] arr is the declaration of the array, so the reference variable arr is getting defined in stack; and new int[5] is its initialization, new is the keyword used for creating a new object in the heap memory, this is where 5 objects are getting initialized in the heap memory, and until we assign something to the array all the elements contain the element 0, i.e point toward the element 0, so if we print arr[3] then it will print 0.
+Now if we had a non-primitive datatype array here, like : String arr = new String[5], then all the elements point to a special literal 'null' before anything is assigned to them, so if we print arr[3] then the output will come null.
+
+4-- Now the declaration part int[] arr is executed at compile time, the ref var is stored in stack memory, and the next part which is the initialization part is executed at runtime, and the objects in heap memory are created at runtime, and all the objects of array have a ref var like arr[0], arr[1] which points to their specific elements if any assigned, and if none assigned it points to 0 or null
+
+5-- The basic defn of array says that all its objects live in continuous memory spaces in RAM like if the first element is stored in memory address ______1 then the next element will be stored in the memory address ______2, but thats true in c or c++ but not in java, in java there is no concept of pointers, so we cant get the address of any object, so here the objects which are created in heap at runtime may or may not be continuously stored, it totally depends on the JVM
+
+6-- there is this method -> Arrays.toString(); of the Arrays class which returns the value of every element in the array, joins them with commas and then wraps it in square brackets and returns in a string form, so if we have 
+String[] arr = {a, b, c, d, e}; and then we do sout(Arrays.toString(arr)) then it will print -> [a, b, c, d, e]
+
+7-- syntax of 2d-array -> int[][] arr = new int[row][column]; we dont need to write inside the column bracket as every array inside the array can have its own length, so writing the row bracket is necessary but if we want flexibility with length of each array inside the array then we should leave the column bracket empty
+
+8-- We can also asisgn elements to a 2d array like ->
+                                           int[][] arr = { 
+                                                       {1, 2, 3},
+                                                       {4, 5, 6},
+                                                       {7, 8, 9}
+                                                };
+And a 2d array can also be like :  int[][] arr = { 
+                                                       {1, 2, 3},
+                                                       {4, 5},
+                                                       {6, 7, 8, 9}
+                                                };
+Here if we do sout(Arrays.toString(arr[1])); then it will print -> [4, 5, 6]
+If we had done sout(arr[1]) then it would have given output something like this -> [I@27716f4 which shows its type combined with the reference address of arr(1)
+
+9-- 2d arrays can be imagined as an array of arrays, to access any particular element we can do -> arr[1][0], this will point to the first element in the second array, like if we consider the array above then it will give 4
+
+10-- if we use arr.length in a 2d array it will print the number of rows
+
+11-- if in the above array example we had to find the number of rows then we will do arr.length; but if we had to find the length of the 2nd array in the array then we will do -> arr[1].length

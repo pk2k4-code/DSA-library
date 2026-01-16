@@ -1,0 +1,14 @@
+METHODS:
+
+1-- as soon as the return command is hit in a method, the method ends.
+
+2-- The following explanation is true only for primitive datatypes:---
+When we call any method inside the main method and pass parameters inside it, java passes on the copy of value of those parameters to the variables corresponding in the method, and both of them(variable in main and the corresponding variable in the method) live in different memories i.e different stack frames, so inside the method if we change the value of those variables we are just making them point to any new object, but the variable inside the main method is not affected with that and still keeps pointing to its original object.
+
+3-- The following explanation is true for all objects except strings :---
+When we call any method inside the main method and pass parameters inside it, java passes on the copy of the reference address of the value of the original variable to the corresponding variable in the method, and now both of them variables point to the same object, now if we change something about the object in the method it changes in the main method as well.
+But for string, they also pass the copy of reference address, but due to string being immutable the corresponding variable in method has to point to a new string as it can't change the original object, so the steps here are nearly as in primitive datatypes with only difference being that the copy of reference address is passed.
+
+4-- Shadowing -> When we initialize a variable after public class main{ and before psvm, like int x = 40; then if we do sout(x) inside main method it will print 40, and also if we make a new method and inside it also if we print x it will also print 40, now lets assume that in main method we iwrite int x = 60; now after it, if we do sout(x) it will print 60, if we write print x, and after that if we write sout(x), it will give error as x has been initialized so it can't use the value of the universal scope x, but as inside psvm x has not been initialized yet, it will give error; and this was x shadowing the universal scope x.
+
+5-- varargs -> This means variable arguments in a method as parameters, it doesn't know how many arguments it has to take, if we write public static void fun(int ...v) : this means the method when called inside the main method will take any number of arguments but all should be int, and they would be stored in an array form, if we had to take 2 absolute arguments and also variable arguments, then inside the parameters section the method the varargs will be written at the last, as if we write it in between then how will the computer know when does the variable arguments stop and the absolute one comes, so the varargs one will always be written at last : public static void fun(int a, int b, String ...v)

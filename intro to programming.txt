@@ -1,0 +1,11 @@
+INTRO TO PROGRAMMING:
+
+1-- Compile time starts after we press the run/build button, and runtime starts after the compilation has been done properly without any errors, the errors/warnings we get while writing our code is just coz our IDE runs a mini compile time checks in the background constantly while we type, it still could show some errors which are not real errors, and it can also miss some errors which will be caught during the compile time.
+
+2-- There can be 2 classification of programming languages -> Static and Dynamic, in static languages we need to write the datatypes of the variables and the errors are checked at the compile time and it gives us more control; while in dynamic languages we don't need to write the datatype of the variables, the computer itself performs the type checking at runtime and errors are also caught at runtime, it saves time in writing code but might give error at runtime. Examples of static are Java, C++, C etc. Examples of dynamic are Python, JavaScript, Ruby etc. Like in dynamic language the variables don't have a fixed datatype so, we can write -> a=10; a="boy" , first the a variable will point to the object 10 and possess int datatype, and after that it will point to the boy object and possess string datatype.
+
+3-- When we write something like -> a=10; here a is the reference variable and 10 is the object
+
+4-- There are 2 type of memories in computer : stack and heap, the reference variables stay in stack and the objects stay in heap, the ref var points to the memory address of object in heap. There can be multiple reference variables pointing to the same memory address of any object, and if any one ref var changes the object, then the original object is going to be changed and it will be changes for all, as all were pointing to that object.
+
+5-- If any object has lets assume 2 ref var, and later those variables point to other objects, so our former object has no ref var pointing to it now, so it has no reference variables to this object, and so it will be removed from the memory when garbage collection hits, it hits automatically on its own.

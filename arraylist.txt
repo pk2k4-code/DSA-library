@@ -1,0 +1,29 @@
+Arraylist:
+
+1-- we use arraylist when we have an array but we dont know how much size we need to assign it, then instead of arrays we use an arraylist, and it can take variable number of inputs
+
+2-- It is written like -> ArrayList<Integer> alist = new ArrayList<>(size); here size is its initial size
+Under the <> we write the wrapper class we will be assigning to it, but not any primitive datatypes like int, char atc. we used to put in array
+ 
+3-- to add elements to it we use -> alist.add(); like alist.add(67)
+
+4-- and also we can directly print it as -> System.out.println(alist); and it will print all the values in square brackets separated by commas, we dont need the .toString method here coz internally ArrayList calls its own .toString method, but if we are printing it through loop we can't write alist[index], it won't give the element at that index, for that we have to use alist.get(index)
+
+5-- There are also various methods we can use like:
+=>alist..contains(any element) -> this will return true or false
+=>alist.set(index, element) -> it will change the element of the given index to the element provided, like alist.set(3, 75)will change the 3rd index element to 75
+=>alist.remove(index) -> it will remove the element at the given index
+=>alist.get(index) -> this gives you the element at the given index
+
+6-- now we can set an initial size but we also say that we can take as many values as we want, so that is possible here because as soon as the ArrayList gets filled to some extent, it creates a new Arraylist of a bigger size from the former ArrayList and copies the elements to the new ArrayList and then starts taking new values
+
+7-- for multidimensional ArrayList we write -> ArrayList<ArrayList<Integer>> alist2 = new ArrayList<>();
+then we need to add some arraylists in the arraylist alist2, i.e we need to initialize them, so we will use a for loop like:
+for(int i =0; i<3;i++){ alist2.add(new ArrayList<>()); }
+So through this we will add more ArrayLists in the ArrayList alist2, now to add elements to those ArrayLists we can use nested looping -> for(int j = 0; j<3; j++){
+                                         for(int k = 0; k<3; k++){
+                                                 alist2.get(j).add(sc.nextInt)); } }
+through alist2.get(j) we get the first arraylist inside alist2, and then add 3 elements to it as the loop runs for 3 times, and this we do for a total of three lists.
+So if we printed -> System.out.println(alist2); and in input we give 1 2 3 4 5 6 7 8 9, then we get an output like this: 
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+ 

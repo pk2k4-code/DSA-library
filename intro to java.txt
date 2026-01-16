@@ -1,0 +1,26 @@
+Intro to Java :
+
+1-- Java code executes in the following way->  First it creates a .java file which is the source code and is human readable, and then the compiler compiles the entire file to a .class file which is the byte code and this code will not directly run on a system we will need a JVM to run this, and this is the reason why java is platform independent, then the interpreter(here JVM) line by line interprets the byte code to machine code(0 and 1). In languages like C or C++ the middle part is skipped they dont create a byte code, rather they directly make a .exe file why runs according to the architecture of the system its created on and thus those languages are not paltform independent.
+
+2-- JDK : Java Development Kit -> this provides environment to develop and run the java program, it is a package that includes: development tools that provide an environment to develop your program, JRE to execute your program, a compiler named javac, an archiver called jar, docs generator and interpreter/loader
+
+3-- JRE : Java Runtime Environment -> It is an installation package that provides environment to only run the program, it consists of deployment technologies, user interface toolkits, integration libraries, base libraries, JVM(Java Virtual Machine)
+
+4-- After we get the .class file, the next things happen at runtime: class loader loads all classes needed to run the program, and JVM sends code to byte code verifier to check the format of the code.
+
+5-- There is a JIT(just in time) compiler which is used when some block of code is repeated so it will have to be interpreted line by line again and again, so it wont be efficient so the JIT compiler provides the direct machine code for those code so re interpretation is not required, and makes the executiona bit faster.
+
+6-- By convention, classes name in java should start with capital letters.
+
+7-- Primitve datatypes are the datatypes which cannot be further broken into more datatypes, like int, char etc. But string can be further broken into char so its not primitive datatype
+
+8-- In java, Identifiers are used to name variables, classes, methods, interfaces, packages, objects; while Literals are the fixed values directly written in code, like 10 is integer literal, "boy" is string literal, true is boolean literal.
+
+9-- If in an int datatype we want to separate the place values, we cant use , as the syntax does not allows it, so we use underscores as it iwll be ignored, int a = 23,00,000 is WRONG but int a = 23_00_000 is CORRECT
+
+10-- There is a rule for automatic conversion of types in java, when there are different types ina arithmetic expression then the result comes in form of the largest one, like float +int-double = double;
+also byte, short and int are automatically promoted to int while doing any arithmetic.
+The smaller to bigger order is: char->byte->short->int->long->float->double.
+So the conversion of smaller to bigger is automatic, while for bigger to smaller we have to do type casting.
+
+11-- byte b =50+20 runs fine; but byte b =20; b = b*2; this will give error coz int he former case during compile time java sees 50 and 20 as compile time constants not variables and it adds them right then  and they fit inside byte, but in the latter case there is variable and its value is known during runtime only, so java cant take the risk of putting it under byte as the result might be loss of data if its larger than byte range so it follows the rules and promotes it to int.
