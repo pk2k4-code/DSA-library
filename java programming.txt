@@ -1,0 +1,39 @@
+JAVA PROGRAMMING NOTES :
+
+1. For comments, add // before the comment you want to write, and for a multi line comment use /* comment */
+
+2. If we write double = 19; and print it then it won't print 19 it will print 19.0 coz the datatype is double not int.
+
+3. The char datatype contains only one character be it any letter or any symbol inside single quotes.
+
+4. There  is a convention in java called the camel case convention which states that if we have to use 2 words in the name of any variable then the first letter of the first word should be lowercase and the first letter of the second word should be uppercase and ofc they should be without any space.
+
+5. The String datatype contains long words, numbers or symbols in double quotes.
+
+6. For checking if a number is prime, we check if it is perfectly divisible starting from 2 to under root n.
+
+7. for reversing a number take a variable rev and then rev = rev*10 + n%10 while n>0
+
+8. In java .toUpperCase() method is for string only, to use it with char you have to use Character.toUpperCase(name of to char variable you want to change).
+
+9. At the end of the method you can only return one value, but if you have to return more, either you can use an array(remember to make the return type int[] if you are returning an int array), or you can use an object. And to return using an int array, at the end of method write return new int[]{VALUES};
+
+10. Redundant means not necessary or wanted
+
+11. While writing a loop to find if a no is twisted prime or not, it can be done in 2 loops, doing the prime checking part in one for loop, using a constraint that i*i<n.
+
+12. if we have to get a double answer in a for loop using i or whatever variable we initialized, it is discouraged to make that variable a double, we should rather do type casting of that specific term to double.
+
+13. Whenever we are using trigonometric methods or series in any programming language we need to keep the inpu as in raidan not in degrees, coz computers use radian not degrees.
+
+14.Proper divisors of a number are all its divisors excluding the number itself.
+
+15. Concatenation can happen between a string and a character.
+
+16.A string method to check if a chracter in a string is digit is Character.isDigit(), and to check if a character in a string is letter is Character.isLetter(), and to check if its either a letter or digit is Character.isLetterOrDigit()
+
+17. Scanner.hasNext() method in java is used for peeking ahead and checking if there is anything else coming(being input), if yes it returns true else returns false.
+
+18. Static Initialization Block: A block of code enclosed in static { ... } that runs automatically once when the class is loaded into memory (before the main method or any object creation), similar to how an app like Instagram must first load its configuration files and connect to the database in the background before the login screen ever appears for the user.
+
+19. There is a built in method in java to convert integer to string => String s = Integer.toString(n);   OR   String s = String.valueOf(n);
