@@ -1,0 +1,38 @@
+GIT NOTES---
+
+1-- To set up git for a new folder, first create a new repo in github, then open git bash and then go to the folder, then do -> git init , then -> git add . ; then -> git commit -m "   " ; then -> git remote add origin "link of repo" ; then -> git push --set-upstream origin main
+
+1-- To go inside a text file named names.txt you can use the command -> vi names.txt, and then to exit press esc, and then to save and quit type -> :wq, exit without saving type -> :q, just save and stay in the file type -> :w ; and to view the changed file you can type command -> cat names.txt
+
+2-- To capture the creation of a new file or change in any file use the command -> git add (file name) , or if there are many files and you want all of them to be captured at once you can use the command -> git add .
+
+3-- And then to commit that capture you can use the command -> git commit -m "any message"
+
+4-- In git workspace, if you want to see the list of all files and folders in the present directory then you can use the command -> ls; and if you want to see the hidden files as well then use the command -> ls -a
+
+5-- If you want to change the directory to any other folder in the present directory then you can use the command -> 
+cd (name of folder), like -> cd desktop ; if you want to go back use the command -> cd .. and if you want to go to the start directory then use the command -> cd ~
+
+6-- If you want to check the status of the files in the directory if they committed, or added or not, then use the command -> git status
+
+7-- If we did git add (file name) to any file by mistake and we want to go back then we use the command -> 
+git restore --staged (file name) ; like git restore --staged names.txt
+
+8-- Using the command -> git log; we can see the history of commits to any file
+
+9-- To delete any file you can use the command -> rm (file name)
+
+10-- If you delete a file by mistake and now want to go back to the previous version where the file was not deleted, then you can use git log, and then identify the commit you want to restore, there is a long id of that commit copy it and then use the command -> git reset (id); after it runs the commits above this id in the log will all disappear
+
+11-- If we have done git add . to some changes, but now we want to work on something different and keep these aside without committing them or loosing them, then we can use the command -> git stash; and then all those change will be kept in a separate area; now if we want to bring them back then we use the command -> git stash pop, or if we want to delete all those in that separate area then we use the command -> git stash clear
+
+12-- If we create a new repo, then in our git bash we use the command -> git remote add origin (link of the repo page), now here git is just a git command, remote means we are working with url, add means we are adding a new url, origin means what is the name of the url going to be which we are adding, by convention its origin, but we can keep it anything else
+
+13-- The command -> git remote -v shows us all the url that are connected to the folder we are in.
+
+14-- Using the command -> git push origin main; we push the changes to the url we are writing here, origin here, and the branch we are pushing it to is main
+
+15-- Branches are important in git as when trying to add a new feature we should not do commits on the main branch coz we can affect the original code resulting in improper functioning of the code, we should create a new branch and do commits on it, to make a new branch we use the command -> git branch (branch name); and to move to any branch we use the command -> 
+git checkout (branch name); and to check which branch we are on right now we use the command -> git branch; and to delete a branch we use the command -> git branch -d (branch name); also we cant delete a branch we are on right now.
+
+16-- We cannot directly make changes to anyone's project, first we have to fork it, and copy(clone) to our own account 
