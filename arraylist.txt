@@ -2,7 +2,7 @@ Arraylist:
 
 1-- we use arraylist when we have an array but we dont know how much size we need to assign it, then instead of arrays we use an arraylist, and it can take variable number of inputs
 
-2-- It is written like -> ArrayList<Integer> alist = new ArrayList<>(size); here size is its initial size
+2-- It is written like -> ArrayList<Integer> alist = new ArrayList<>()
 Under the <> we write the wrapper class we will be assigning to it, but not any primitive datatypes like int, char atc. we used to put in array
  
 3-- to add elements to it we use -> alist.add(); like alist.add(67)
