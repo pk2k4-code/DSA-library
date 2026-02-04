@@ -16,7 +16,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 package imp_ques;
 
-public class removeDuplicatesFromSortedArray_26 {
+public class leetcode_26 {
     public int removeDuplicates(int[] nums) {
         int k = 1;
         for(int i = 0; i<nums.length-1; i++){

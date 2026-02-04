@@ -16,7 +16,7 @@ Thus, the result should be [1,0].
 
 package imp_ques;
 
-public class plusOne_66 {
+public class leetcode_66 {
     public int[] plusOne(int[] digits) {
         int size = 0;
         int count = 0;

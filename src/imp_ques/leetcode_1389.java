@@ -21,7 +21,7 @@ nums       index     target
 
 package imp_ques;
 
-public class targetArray_1389 {
+public class leetcode_1389 {
     public int[] createTargetArray(int[] nums, int[] index) {
         int[] target = new int[nums.length];
         for(int i = 0; i<nums.length; i++){
