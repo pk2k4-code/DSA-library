@@ -13,7 +13,7 @@ rotate 3 steps to the right: [5,6,7,1,2,3,4]
 package imp_ques;
 public class leetcode_189 {
     public void rotate(int[] nums, int k) {
-        k = k % nums.length;
+        k = k % nums.length;  //we do this to bring no of rotations to minimal as if there are 7 place right                           rotations in an array of length 3 then it will be same as 2 place right rotations
 
         reverse(nums, 0, nums.length - 1);
 
